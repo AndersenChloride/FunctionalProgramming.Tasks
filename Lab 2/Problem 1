@@ -1,7 +1,7 @@
 module Main (main) where
 
 main::IO()
-main = putStr (show (end ['a'..'z']))
+main = putStr (show (end [1..5]))
 
 end :: [a]-> a
 end []= error "The list is empty!"
