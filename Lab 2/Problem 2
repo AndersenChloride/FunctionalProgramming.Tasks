@@ -1,0 +1,12 @@
+module Main (main) where
+
+main::IO()
+main = putStr (show (endButOne [1, 2, 3, 5]))
+
+endButOne :: [a] -> a
+
+endButOne [a,b] = a 
+endButOne [] = error "The list is empty!"
+endButOne [a] = error "There is only one element"
+
+endButOne (a : ab) = endButOne ab
