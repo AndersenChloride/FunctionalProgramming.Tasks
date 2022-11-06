@@ -5,5 +5,5 @@ main = putStr (show (end [1..5]))
 
 end :: [a]-> a
 end []= error "The list is empty!"
-end [x] = x 
-end (_ : xs)= end xs
+end [a] = a  
+end (_ : ab)= end ab
