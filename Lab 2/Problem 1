@@ -1,0 +1,9 @@
+module Main (main) where
+
+main::IO()
+main = putStr (show (end ['a'..'z']))
+
+end :: [a]-> a
+end []= error "The list is empty!"
+end [x] = x 
+end (_ : xs)= end xs
