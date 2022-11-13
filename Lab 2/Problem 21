@@ -6,5 +6,5 @@ main = putStr (show (put 2 3 [1, 2, 3, 5]))
 put :: a -> Int -> [a] -> [a]
 put new _ [] = [new]
 put new i (x:xs)
-  | i <= 0 = newE:x:xs
+  | i <= 0 = new:x:xs
   | otherwise = a : put new (i - 1) xs
