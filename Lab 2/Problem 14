@@ -4,6 +4,5 @@ main::IO()
 main = putStr (show (dupli [1,2,3]))
 
 dupli :: [a] -> [a]
-dupli [] = error "No elements" 
-dupli [x] = x:[x] 
+dupli [] = []
 dupli (x:xs) = x : x : dupli xs
