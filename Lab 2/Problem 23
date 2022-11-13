@@ -1,0 +1,7 @@
+module Main (main) where
+
+main::IO()
+main = putStr (show (range 4 9))
+
+range :: Integer -> Integer -> [Integer]
+range a b = [ x | x <– [a..b]]
