@@ -4,4 +4,7 @@ main::IO()
 main = putStr (show (range 4 9))
 
 range :: Integer -> Integer -> [Integer]
-range a b = [ x | x <– [a..b]]
+range a b 
+    | a < b = [ x | x <– [a..b]]
+    | a > b = [ x | x <– [b..a]]
+    | a == b = [a]  
