@@ -6,5 +6,5 @@ main = putStr (show (range 4 9))
 range :: Integer -> Integer -> [Integer]
 range a b 
     | a < b = [ x | x <– [a..b]]
-    | a > b = [ x | x <– [b..a]]
+    | a > b = [ x | x <– [a, a-1..b]]
     | a == b = [a]  
