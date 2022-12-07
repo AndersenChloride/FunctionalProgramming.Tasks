@@ -5,8 +5,8 @@ main = do print $ show (dupli [1, 2, 3, 4, 5])
 
 myFoldr :: (a -> b -> b) -> b -> [a] -> b
 myFoldr con temp = \x -> case x of
-    a:as    -> a `con` myFoldr con temp as
-    []      -> temp  
+    a:as -> a `con` myFoldr con temp as
+    []   -> temp  
 
 
 dupli = myFoldr (\ x xs -> x : x : xs) []
