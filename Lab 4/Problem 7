@@ -9,9 +9,9 @@ myMap _ [] = []
 myMap f (x:xs) = f x : myMap f xs
 
 myFoldr :: (a -> b -> b) -> b -> [a] -> b
-myFoldr cons nil = \x -> case x of
-    a:as    -> a `cons` myFoldr cons nil as
-    []      -> nil  
+myFoldr con temp = \x -> case x of
+    a:as    -> a `con` myFoldr con temp as
+    []      -> temp  
 
 data List a = Elem a | List [List a]
 flatten :: List a -> [a]
