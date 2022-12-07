@@ -1,0 +1,24 @@
+//Функция map
+myFoldr :: (a -> b -> b) -> b -> [a] -> b
+myFoldr con temp = \x -> case x of
+    a:as -> a `con` myFoldr con temp as
+    []   -> temp  
+
+//Функция const
+myConst x _ = x
+
+//Функция scanl
+myScanl :: (b -> a -> b) -> b -> [a] -> [b]
+myScanl f x [] = [x]
+myScanl f x (y:ys) = x : myScanl f (f x y) ys
+
+//Функция replicate
+myReplicate :: Int -> a -> [a]
+myReplicate n x
+  | n <= 0 = []
+  | otherwise = x : myReplicate (n - 1) x
+  
+//Функция Map
+myMap :: (a -> b) -> [a] -> [b]
+myMap _ [] = []
+myMap f (x:xs) = f x : myMap f xs
