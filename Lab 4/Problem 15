@@ -9,7 +9,8 @@ myFoldr con temp = \x -> case x of
     a:as    -> a `con` myFoldr con temp as
     []      -> temp  
 
+myConst x _ = x
 
 intReplica :: [a] -> Int -> [a]
 intReplica [] _ = []
-intReplica (x:xs) s = myFoldr (const (x:)) (intReplica xs s) [1..s]
+intReplica (x:xs) n = myFoldr (myConst (x:)) (intReplica xs n) [1..n]
