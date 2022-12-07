@@ -1,0 +1,18 @@
+module Main (main) where
+
+main :: IO ()
+main = do print $ show (range 4 9)
+          print $ show (range 9 4)
+
+myScanl :: (b -> a -> b) -> b -> [a] -> [b]
+myScanl f x [] = [x]
+myScanl f x (y:ys) = x : myScanl f (f x y) ys
+
+myReplicate :: Int -> a -> [a]
+myReplicate n x
+  | n <= 0 = []
+  | otherwise = x : myReplicate (n - 1) x
+
+range l r 
+      | l < r = myScanl (+) l (myReplicate (r - l) 1)
+      | l > r = myScanl (-) l (myReplicate (l - r) 1)
