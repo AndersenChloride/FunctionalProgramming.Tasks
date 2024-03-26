@@ -1,9 +1,3 @@
--- Exercise set 4b: folds
-
-module Set4b where
-
-import Mooc.Todo
-
 ------------------------------------------------------------------------------
 -- Ex 1: countNothings with a fold. The function countNothings from
 -- the course material can be implemented using foldr. Your task is to
