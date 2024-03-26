@@ -1,21 +1,3 @@
--- Exercise set 4a:
---
---  * using type classes
---  * working with lists
---
--- Type classes you'll need
---  * Eq
---  * Ord
---  * Num
---  * Fractional
---
--- Useful functions:
---  * maximum
---  * minimum
---  * sort
-
-module Set4a where
-
 import Mooc.Todo
 import Data.List
 import Data.Ord
