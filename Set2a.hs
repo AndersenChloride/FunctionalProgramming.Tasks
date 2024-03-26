@@ -1,20 +1,3 @@
--- Exercise set 2:
---  * Guards
---  * Lists
---  * Maybe
---  * Either
---
--- Functions you will need:
---  * head, tail
---  * take, drop
---  * length
---  * null
-
-module Set2a where
-
-import Mooc.Todo
-
--- Some imports you'll need. Don't add other imports :)
 import Data.List
 
 ------------------------------------------------------------------------------
