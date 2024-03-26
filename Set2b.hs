@@ -1,8 +1,3 @@
-module Set2b where
-
-import Mooc.Todo
-
--- Some imports you'll need. Don't add other imports :)
 import Data.List
 
 ------------------------------------------------------------------------------
